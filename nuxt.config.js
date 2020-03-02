@@ -2,11 +2,11 @@ export default {
   mode: 'spa',
 
   head: {
-    title: 'Font Test',
+    title: 'Interactive List Test',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Font test description.' }
+      { hid: 'description', name: 'description', content: 'Interactive list test description.' }
     ],
     link: [
     ]
@@ -29,8 +29,6 @@ export default {
   ],
 
   vuetify: {
-    customVariables: ['~/assets/variables.scss'],
-    treeShake: true
   },
 
   build: {

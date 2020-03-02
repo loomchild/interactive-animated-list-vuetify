@@ -1,6 +1,6 @@
-# change-vuetify-font
+# interactive-animated-list-vuetify
 
-> A project demonstrating how to change fonts in Vuetify.js with Nuxt.js
+> A project demonstrating how to implement an interactive animated list in Vuetify.js
 
 ## Build Setup
 
