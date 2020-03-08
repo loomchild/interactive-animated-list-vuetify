@@ -41,7 +41,7 @@ export default {
 
   methods: {
     remove (index) {
-      const newValue = this.value.slice(0, index).concat(this.value.slice(index + 1))
+      const newValue = [...this.value.slice(0, index), ...this.value.slice(index + 1)]
       this.$emit('input', newValue)
     },
 
