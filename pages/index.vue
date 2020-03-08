@@ -38,9 +38,25 @@ export default {
   },
 
   data: () => ({
-    items: [],
+    items: [
+      {
+        id: 1,
+        name: 'Jane Adams',
+        email: 'jane@adams.com'
+      },
+      {
+        id: 2,
+        name: 'Paul Davis',
+        email: 'paul@davis.com'
+      },
+      {
+        id: 3,
+        name: 'Amanda Brown',
+        email: 'amanda@brown.com'
+      }
+    ],
 
-    counter: 0
+    counter: 10
   }),
 
   methods: {
