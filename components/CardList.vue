@@ -46,14 +46,14 @@ export default {
     },
 
     up (index) {
-      const newValue = this.value.slice()
+      const newValue = [...this.value]
       newValue[index] = this.value[index - 1]
       newValue[index - 1] = this.value[index]
       this.$emit('input', newValue)
     },
 
     down (index) {
-      const newValue = this.value.slice()
+      const newValue = [...this.value]
       newValue[index] = this.value[index + 1]
       newValue[index + 1] = this.value[index]
       this.$emit('input', newValue)
