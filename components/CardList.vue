@@ -1,41 +1,28 @@
 <template>
-  <div>
-    <v-row>
-      <v-col cols="12">
-        <transition-group name="slide" tag="div">
-          <v-card v-for="(item, index) in value" :key="item[itemId]" outlined class="mt-3">
-            <v-card-title class="float-right">
-              <v-btn :disabled="index + 1 >= value.length" @click="down(index)" icon>
-                <v-icon>
-                  mdi-arrow-down
-                </v-icon>
-              </v-btn>
-              <v-btn :disabled="index === 0" @click="up(index)" icon>
-                <v-icon>
-                  mdi-arrow-up
-                </v-icon>
-              </v-btn>
-              <v-btn @click="remove(index)" icon>
-                <v-icon>
-                  mdi-close
-                </v-icon>
-              </v-btn>
-            </v-card-title>
-            <v-card-text>
-              <slot #item="item" #index="index" />
-            </v-card-text>
-          </v-card>
-        </transition-group>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="auto">
-        <v-btn @click="add">
-          Create
+  <transition-group name="slide" tag="div">
+    <v-card v-for="(item, index) in value" :key="item[itemId]" outlined class="mt-3">
+      <v-card-title class="justify-end pb-0">
+        <v-btn :disabled="index + 1 >= value.length" @click="down(index)" icon>
+          <v-icon>
+            mdi-arrow-down
+          </v-icon>
         </v-btn>
-      </v-col>
-    </v-row>
-  </div>
+        <v-btn :disabled="index === 0" @click="up(index)" icon>
+          <v-icon>
+            mdi-arrow-up
+          </v-icon>
+        </v-btn>
+        <v-btn @click="remove(index)" icon>
+          <v-icon>
+            mdi-close
+          </v-icon>
+        </v-btn>
+      </v-card-title>
+      <v-card-text>
+        <slot :item="item" :index="index" />
+      </v-card-text>
+    </v-card>
+  </transition-group>
 </template>
 
 <script>
@@ -53,11 +40,6 @@ export default {
   },
 
   methods: {
-    add () {
-      TODO: generate ID if not provided, maybe also add method
-      const newValue = this.value.slice(0, this.value.length).push({})
-    },
-
     remove (index) {
       const newValue = this.value.slice(0, index).concat(this.value.slice(index + 1))
       this.$emit('input', newValue)
