@@ -1,5 +1,5 @@
 <template>
-  <transition-group name="slide" tag="div">
+  <transition-group name="list" tag="div">
     <v-card v-for="(item, index) in value" :key="item[itemId]" outlined class="mt-3">
       <v-card-title class="justify-end pb-0">
         <v-btn :disabled="index + 1 >= value.length" @click="down(index)" icon>
@@ -63,15 +63,15 @@ export default {
 </script>
 
 <style scoped>
-.slide-enter, .slide-leave-to {
+.list-enter, .list-leave-to {
   opacity: 0;
 }
 
-.slide-enter-active, .slide-leave-active {
+.list-enter-active, .list-leave-active {
   transition: opacity 0.5s ease;
 }
 
-.slide-move {
+.list-move {
   transition: transform 0.5s ease-out;
 }
 </style>
