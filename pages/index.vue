@@ -7,12 +7,12 @@
             <card-list v-model="items" #default="{ item }">
               <v-row>
                 <v-col cols="12">
-                  <v-text-field v-model="item.name" label="Name" type="string" hide-details />
+                  <v-text-field v-model="item.name" label="Name" hide-details />
                 </v-col>
               </v-row>
               <v-row>
                 <v-col cols="12">
-                  <v-text-field v-model="item.email" label="Email" type="string" hide-details />
+                  <v-text-field v-model="item.email" label="Email" hide-details />
                 </v-col>
               </v-row>
             </card-list>
