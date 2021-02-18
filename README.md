@@ -2,7 +2,7 @@
 
 > A project demonstrating how to implement an interactive animated list in Vuetify.js
 
-Read my related article on [Medium](https://medium.com/untitled-factory/interactive-ordered-animated-list-in-vue-js-with-vuetify-js-and-nuxt-js-ccf71548f8bf) to learn more.
+Read my related article on [Medium](https://medium.com/@jareklipski/interactive-ordered-animated-list-in-vue-js-with-vuetify-js-and-nuxt-js-ccf71548f8bf) to learn more.
 
 ## Build Setup
 
